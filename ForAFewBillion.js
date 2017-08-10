@@ -88,13 +88,13 @@ var reward = 0;
 var days1B = 0;
 
 
-for (reward =0.01; reward < reward.POSITIVE_INFINITY; reward++ ) {
+for (reward =0.01; reward <= Infinity ; reward++ ) {
   reward =+ penny;
   penny = penny *2;
   days1B++;
 
-  // if(reward == reward.POSITIVE_INFINITY)
-  //   break;
+  if(reward == Infinity)
+    break;
 
 }
 
