@@ -43,7 +43,7 @@ for (var i =1; i <= 30; i++ ) {
 
 }
 
-console.log("$10,000 in :" + days10k + "days");
+console.log("$10,000 in: " + days10k + "days");
 
 /**
 
@@ -71,11 +71,11 @@ for (reward =0.01; reward <1100000000; i++ ) {
 
 }
 
-console.log("$1B (closer to: $"+reward+") in :" + days1B + "days");
+console.log("$1B (closer to: $"+reward+") in: " + days1B + "days");
 
 /**
 
-Infinity TEST -- NOT WORKING / DUNNO HOW TO MAKE IT WORK
+Infinity TEST
 
 */
 
@@ -98,4 +98,4 @@ for (reward =0.01; reward <= Infinity ; reward++ ) {
 
 }
 
-console.log("INFINITY in :" + days1B + "days");
+console.log("INFINITY in : " + days1B + "days");
