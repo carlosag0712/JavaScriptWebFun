@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    "use strict";
+
+    var quarters = 0;
+    var game = 0;
+    var prize = 0;
+
+    // Make a function that takes a number of quarters (1 quarter = 1 game).
+
+    function gameChance(coininput, limit){
+
+      if(coininput <=0){
+        console.log("Please enter at least 1 quarter to play");
+        return quarters;
+      }
+
+
+
+      //  Bonus (Only If You Have Time):
+      //  Let the user pass the number they are willing to leave with
+      // (ex: If they won the lottery and still have 40 coins,
+      //   they will keep playing until they have collected 200 coins)
+
+      if(limit > coininput || limit <0){
+        console.log("enter a limit equal or less than "+(coininput-1));
+        return quarters;
+
+      }
+
+      if(limit ==undefined){
+        limit = 0;
+      }
+
+
+
+      while (coininput > limit){ //check if the user has coins to play // keeps playing
+        /*
+          There is a 1 in 100 chance to win the slot machine so
+          my logic tells me that the person should only win if
+          a specific value in the range of 1 to 100 is returned
+        */
+          var randomChance = Math.floor((Math.random() * 100) +1);
+
+          if(randomChance == 100){ // If we win
+            prize = Math.floor((Math.random() * (100-50)) + 50);
+            console.log(prize);
+            console.log("You are a winner!");
+            console.log("You won: "+prize+" quarters");
+            coininput = coininput + prize;
+            quarters = coininput;
+            console.log("You now have: "+quarters+" quarters total credit");
+
+
+          }else {
+            coininput--;
+            quarters = coininput;
+              console.log("Nice try, but you lost, your balance is now " + coininput +" quarters");
+              gameChance(coininput, limit); // Keeps playing until you are out of quarters
+              return quarters;
+            }
+
+            // else if (coininput >= playtill) {
+            //   coininput--;
+            //   var limitplay = coininput - playtill
+            //   quarters = limitplay;
+            //     console.log("Nice try, but you lost, your balance is now " + quarters +" quarters");
+            //     gameChance(playtill); // Keeps playing until you are out of quarters
+            //     return quarters;
+            //
+            // }
+
+          }
+
+        }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
