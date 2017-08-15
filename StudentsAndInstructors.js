@@ -43,11 +43,12 @@ var users = {
 
   //  for(key in data){
   //    console.log(key);
+    console.log(property)
      for(var i=0;i<data[property].length;i++){
-
        console.log((i+1)+" - "+data[property][i].first_name.toUpperCase()+" "+data[property][i].last_name.toUpperCase()+" - "+(data[property][i].first_name.length+data[property][i].last_name.length));
      }
 
+     console.log(property2)
      for(var i=0;i<data[property2].length;i++){
        console.log((i+1)+" - "+data[property2][i].first_name.toUpperCase()+" "+data[property2][i].last_name.toUpperCase()+" - "+(data[property2][i].first_name.length+data[property2][i].last_name.length));
      }
@@ -63,7 +64,7 @@ var users = {
  console.log("PART II - OPTIONAL VERSION 2");
  console.log("=================================================");
 
- function printArrayWithNumOfChars(data){
+ function printArrayWithNumOfChars2(data){
 
    for(key in data){
      console.log(key);
@@ -78,4 +79,4 @@ var users = {
 
  }
 
- printArrayWithNumOfChars(users, "Students", "Instructors");
+ printArrayWithNumOfChars2(users);
