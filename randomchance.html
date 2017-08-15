@@ -26,11 +26,7 @@
       //   did it a little differently, instead I allowed the players to limit
       //   their gamble
 
-      if(limit > coininput || limit <0){
-        console.log("enter a limit equal or less than "+(coininput-1));
-        return quarters;
 
-      }
 
       if(limit ==undefined){
         limit = 0;
@@ -54,6 +50,7 @@
             coininput = coininput + prize;
             quarters = coininput;
             console.log("You now have: "+quarters+" quarters total credit");
+            return quarters;
 
 
           }else {
